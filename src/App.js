@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import AddTask from "./Components/AddTask";
-import TaskList from "./Components/AddTask";
+import TaskList from "./Components/TaskList";
 import axios from "axios";
 
 // Import from react-router-dom

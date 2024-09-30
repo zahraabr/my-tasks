@@ -44,16 +44,22 @@ const AddTask = ({ fetchTasks, currentTask, setCurrentTask }) => {
 
     const taskData = { name, priority, date };
 
-    if (currentTask) {
-      // Edit task
-      await axios.put(
-        `http://localhost:5001/tasks/${currentTask._id}`,
-        taskData
-      );
-    } else {
-      // Add task
-      await axios.post("http://localhost:5001/tasks", taskData);
-    }
+
+
+    try {
+      if (currentTask) {
+        // Edit task
+        await axios.put(
+          `http://localhost:5001/tasks/${currentTask._id}`,
+          taskData
+        );
+      } else {
+        // Add task
+        await axios.post("http://localhost:5001/tasks", taskData);
+      }
+      handleClose()
+    } catch (error) {
+    } 
 
     fetchTasks();
     setCurrentTask(null); // Reset the form
