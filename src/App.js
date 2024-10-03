@@ -25,9 +25,9 @@ function App() {
       <header className="App-header">
         <p>Tasks List</p>
         <AddTask
-          fetchTasks={fetchTasks}
-          currentTask={currentTask}
-          setCurrentTask={setCurrentTask}
+          // fetchTasks={fetchTasks}
+          // currentTask={currentTask}
+          // setCurrentTask={setCurrentTask}
         />
         <TaskList
           tasks={tasks}
